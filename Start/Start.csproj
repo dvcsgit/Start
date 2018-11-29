@@ -50,14 +50,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\Context.cs" />
-    <Compile Include="Database\Person.cs" />
+    <Compile Include="Db\Address.cs" />
+    <Compile Include="Db\AddressMap.cs" />
+    <Compile Include="Db\Company.cs" />
+    <Compile Include="Db\CompanyInfo.cs" />
+    <Compile Include="Db\CompanyMap.cs" />
+    <Compile Include="Db\Context.cs" />
+    <Compile Include="Db\Initializer.cs" />
+    <Compile Include="Db\Person.cs" />
+    <Compile Include="Db\PersonInfo.cs" />
+    <Compile Include="Db\PersonMap.cs" />
+    <Compile Include="Db\PersonState.cs" />
+    <Compile Include="Db\PersonType.cs" />
+    <Compile Include="Db\PersonTypeMap.cs" />
+    <Compile Include="Db\PersonViewInfo.cs" />
+    <Compile Include="Db\PersonViewInfoMap.cs" />
+    <Compile Include="Db\Phone.cs" />
+    <Compile Include="Db\Student.cs" />
+    <Compile Include="Db\StudentMap.cs" />
+    <Compile Include="Migrations\201811290734185_InitialMigration.cs" />
+    <Compile Include="Migrations\201811290734185_InitialMigration.Designer.cs">
+      <DependentUpon>201811290734185_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811290740559_PersonDateAdded.cs" />
+    <Compile Include="Migrations\201811290740559_PersonDateAdded.Designer.cs">
+      <DependentUpon>201811290740559_PersonDateAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811290757383_PersonPersonNamesIndex.cs" />
+    <Compile Include="Migrations\201811290757383_PersonPersonNamesIndex.Designer.cs">
+      <DependentUpon>201811290757383_PersonPersonNamesIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201811290734185_InitialMigration.resx">
+      <DependentUpon>201811290734185_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811290740559_PersonDateAdded.resx">
+      <DependentUpon>201811290740559_PersonDateAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811290757383_PersonPersonNamesIndex.resx">
+      <DependentUpon>201811290757383_PersonPersonNamesIndex.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

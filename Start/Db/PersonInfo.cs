@@ -4,12 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Start.Database
+namespace Start.Db
 {
-    public class Person
+    public class PersonInfo
     {
         public int PersonId { get; set; }
+        public string PersonType { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        public IEnumerable<string> Phones { get; set; }
     }
 }
