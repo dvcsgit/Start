@@ -68,19 +68,6 @@
     <Compile Include="Db\Phone.cs" />
     <Compile Include="Db\Student.cs" />
     <Compile Include="Db\StudentMap.cs" />
-    <Compile Include="Migrations\201811290734185_InitialMigration.cs" />
-    <Compile Include="Migrations\201811290734185_InitialMigration.Designer.cs">
-      <DependentUpon>201811290734185_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201811290740559_PersonDateAdded.cs" />
-    <Compile Include="Migrations\201811290740559_PersonDateAdded.Designer.cs">
-      <DependentUpon>201811290740559_PersonDateAdded.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201811290757383_PersonPersonNamesIndex.cs" />
-    <Compile Include="Migrations\201811290757383_PersonPersonNamesIndex.Designer.cs">
-      <DependentUpon>201811290757383_PersonPersonNamesIndex.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,17 +76,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201811290734185_InitialMigration.resx">
-      <DependentUpon>201811290734185_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811290740559_PersonDateAdded.resx">
-      <DependentUpon>201811290740559_PersonDateAdded.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811290757383_PersonPersonNamesIndex.resx">
-      <DependentUpon>201811290757383_PersonPersonNamesIndex.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -39,7 +39,7 @@ namespace Start.Db
         public int NumberOfCars { get; set; }
         public virtual ICollection<Phone> Phones { get; set; }//lazy loading
 
-        public int? PersonTypeId { get; set; }
+        public Guid? PersonTypeId { get; set; }
         public virtual PersonType PersonType { get; set; }
 
         public virtual ICollection<Company> Companies { get; set; }
@@ -64,7 +64,7 @@ namespace Start.Db
 
         public PersonState PersonState { get; set; }
 
-        public DateTime DateAdded { get; set; }
+        public DateTime? DateAdded { get; set; }
 
         public byte[] RowVerson { get; set; }//TimeStamp
     }

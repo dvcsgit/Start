@@ -74,6 +74,8 @@ namespace Start.Db
                 .HasMaxLength(8)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Computed)
                 .IsRowVersion();
+
+            
         }
     }
 }

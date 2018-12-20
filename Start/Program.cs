@@ -25,43 +25,44 @@ namespace Start
             //    context.SaveChanges();
             //}
 
-            //try
-            //{
-            //    using (var context = new Context())
-            //    {
-            //        var person = new Person
-            //        {
-            //            BirthDate = new DateTime(1980, 1, 2),
-            //            FirstName = "John",
-            //            HeightInFeet = 6.1M,
-            //            IsActive = true,
-            //            LastName = "Doe",
-            //            MiddleName = "M",
-            //            Address = new Address { Street = "new street" },
-            //            PersonState = PersonState.Active,
-            //            PersonTypeId = 0
-            //        };
-            //        //var personViewInfo = new PersonViewInfo
-            //        //{
-            //        //    FirstName = "f",
-            //        //    LastName = "l",
-            //        //    TypeName = "type"
-            //        //};
-            //        //context.PersonView.Add(personViewInfo);
+            try
+            {
+                using (var context = new Context())
+                {
+                    Guid guid = Guid.NewGuid();
+                    var person = new Person
+                    {
+                        BirthDate = new DateTime(1980, 1, 2),
+                        FirstName = "John",
+                        HeightInFeet = 6.1M,
+                        IsActive = true,
+                        LastName = "Doe",
+                        MiddleName = "M",
+                        Address = new Address { Street = "new street" },
+                        PersonState = PersonState.Active,
+                        PersonTypeId = guid
+                    };
+                    //var personViewInfo = new PersonViewInfo
+                    //{
+                    //    FirstName = "f",
+                    //    LastName = "l",
+                    //    TypeName = "type"
+                    //};
+                    //context.PersonView.Add(personViewInfo);
 
-            //        context.PersonTypes.Add(new PersonType { TypeName = "type0" });
+                    context.PersonTypes.Add(new PersonType {PersonTypeId= guid, TypeName = "type0" });
 
-            //        person.Phones.Add(new Phone { PhoneNumber = "123-446-7890" });
-            //        person.Phones.Add(new Phone { PhoneNumber = "123-446-7891" });
-            //        context.People.Add(person);
+                    person.Phones.Add(new Phone { PhoneNumber = "123-446-7890" });
+                    person.Phones.Add(new Phone { PhoneNumber = "123-446-7891" });
+                    context.People.Add(person);
 
-            //        context.SaveChanges();
-            //    }
-            //}
-            //catch (DbEntityValidationException ex)
-            //{
+                    context.SaveChanges();
+                }
+            }
+            catch (DbEntityValidationException ex)
+            {
 
-            //}
+            }
 
             //using (var context = new Context())
             //{
